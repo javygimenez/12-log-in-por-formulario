@@ -1,0 +1,23 @@
+{{#if name}}
+<div class="bg-success p-4 mb-4 d-flex justify-content-between align-items-center" style="--bs-bg-opacity: .5;">
+	<h1>Bienvenido {{name}}</h1>
+	<form action="/logout" method="POST">
+		<div>
+			<input class="btn btn-success" type='submit' value='Salir' />
+		</div>
+	</form>
+</div>
+{{/if}}
+<section class="p-4 bg-secondary">
+	<h2 class="text-primary">Productos</h2>
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Precio</th>
+				<th>Foto</th>
+			</tr>
+		</thead>
+		<tbody id="table-products"></tbody>
+	</table>
+</section>
